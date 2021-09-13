@@ -1,0 +1,210 @@
+import requests
+import telebot
+import random
+import os
+from telebot import types
+from time import sleep 
+print("""مطور البوت > @kkkkkgk 
+قناة مطور البوت  > @h8ppp 
+ملاحظة:البوت كان به بعض الاخطاء تم تعديل الاخطاء 
+بواسطة > @y_j_e
+""")
+sleep(3)
+os.system('clear')
+mar = '1234567890'
+bot = telebot.TeleBot('1977591036:AAFk-Rq_7dHjR5iX6HGTQDN47ogkbLgsMGU')
+call  = types.InlineKeyboardButton(text = "START", callback_data = 'sssk')
+@bot.message_handler(commands=['start'])
+def start(message):
+    Keyy = types.InlineKeyboardMarkup()
+    Keyy.row_width = 1
+    Keyy.add(call)
+    bot.send_message(message.chat.id, text=f"""* - الاداة تفحص بينات :
+    - أمريكي *
+    سيتم اضافة دول اخرى قريبا""",parse_mode="markdown",reply_markup=Keyy)
+@bot.callback_query_handler(func=lambda call: True)
+def answer(call):
+    if call.data =="sssk":
+        button(call.message)
+    if call.data =="br":
+        BIN(call.message)
+    if call.data =="im":
+         IM(call.message)
+
+
+lc = types.InlineKeyboardButton(text = "اضغط هنا", callback_data = 'im')
+def button(message):
+    ms = types.InlineKeyboardMarkup(row_width=1)
+    ms.add(lc)
+    bot.edit_message_text(chat_id=message.chat.id,message_id=message.message_id,text="**هل تريد بدء الفحص؟**",parse_mode='markdown',reply_markup=ms)        
+
+
+def BIN(message):
+        l = 0
+        i = 0
+        mar = '0123456789'  
+        while True:
+            
+            bin = str(''.join((random.choice(mar) for i in range(5))))
+            rq = requests.post ("https://lookup.binlist.net/4"+bin)
+        
+            if '"scheme":"amex"' in rq.text:
+                if '"type":"credit"' in rq.text:
+                    if '"America"' in rq.text:
+                        i+=1
+                        bin_trrue = f"""
+                        bin : 4{bin} True ✅                  
+                        """
+                        bot.send_message(message.chat.id, text=bin_trrue)
+            else:
+                l+=1
+            mees = types.InlineKeyboardMarkup(row_width=1)
+            buut = types.InlineKeyboardButton(f"💵⁞ تم فحص  : {l} بين ",callback_data='jhi')
+            buut5 = types.InlineKeyboardButton(f"⚠️ In : 4{bin}",callback_data='jhi5')
+            buut1 = types.InlineKeyboardButton(f"✅⁞ hits : {i}",callback_data='jhi1')            
+            mees.add(buut,buut1,buut5)
+            bot.edit_message_text(chat_id=message.chat.id,message_id=message.message_id,text="**Cheaker Bins**",parse_mode='markdown',reply_markup=mees)        
+                
+        mees = types.InlineKeyboardMarkup(row_width=1)
+        buut = types.InlineKeyboardButton(f"💵⁞ bin good : {k}",callback_data='jhi')
+        buut5 = types.InlineKeyboardButton(f"⚠️ : 37{bin}",callback_data='jhi5')
+        buut1 = types.InlineKeyboardButton(f"✅⁞ hits : {h}",callback_data='jhi1')            
+        mees.add(buut,buut1,buut5)
+        bot.edit_message_text(chat_id=message.chat.id,message_id=message.message_id,text="**Cheaker Bins**",parse_mode='markdown',reply_markup=mees)
+        
+def IM(message):
+        l = 0
+        i = 0
+        mar = '0123456789'  
+        while True:
+            
+            bin = str(''.join((random.choice(mar) for i in range(5))))
+            rq = requests.post ("https://lookup.binlist.net/4"+bin)
+        
+            if '"scheme":"amex"' in rq.text:
+                if '"type":"credit"' in rq.text:
+                    if '"America"' in rq.text:
+                        i+=1
+                        bin_trrue = f"""
+                        bin : 4{bin} True ✅                  
+                        """
+                        bot.send_message(message.chat.id, text=bin_trrue)
+            else:
+                l+=1
+            mees = types.InlineKeyboardMarkup(row_width=1)
+            buut = types.InlineKeyboardButton(f"💵⁞ تم فحص: {l} بين",callback_data='jhi')
+            buut5 = types.InlineKeyboardButton(f"⚠️ تم فحص هذا البين : 4{bin}",callback_data='jhi5')
+            buut1 = types.InlineKeyboardButton(f"✅⁞ بينات شغالة : {i}",callback_data='jhi1')            
+            mees.add(buut,buut1,buut5)
+            bot.edit_message_text(chat_id=message.chat.id,message_id=message.message_id,text="جاري الصيد B_7_5@",parse_mode='markdown',reply_markup=mees)        
+
+bot.polling()
+
+
+#{"number":{},"scheme":"amex","type":"credit","brand":"american express","country":{"numeric":"076","alpha2":"BR","name":"Brazil","emoji":"🇧🇷","currency":"BRL","latitude":-10,"longitude":-55},"bank":{"name":"AMERICAN EXPRESS","url":"www.americanexpress.com","phone":"4078516060"}}
+
+import requests
+import telebot
+import random
+import os
+from telebot
+from time import sleep 
+print("""مطور البوت > @kkkkkgk 
+قناة مطور البوت  > @h8ppp 
+ملاحظة:البوت كان به بعض الاخطاء تم تعديل الاخطاء 
+بواسطة > @y_j_e
+""")
+sleep(3)
+os.system('clear')
+mar = '1234567890'
+bot = telebot.TeleBot('1977591036:AAFk-Rq_7dHjR5iX6HGTQDN47ogkbLgsMGU')
+call  = types.InlineKeyboardButton(text = "START", callback_data = 'sssk')
+@bot.message_handler(commands=['start'])
+def start(message):
+    Keyy = types.InlineKeyboardMarkup()
+    Keyy.row_width = 1
+    Keyy.add(call)
+    bot.send_message(message.chat.id, text=f"""* - الاداة تفحص بينات :
+    - أمريكي *
+    سيتم اضافة دول اخرى قريبا""",parse_mode="markdown",reply_markup=Keyy)
+@bot.callback_query_handler(func=lambda call: True)
+def answer(call):
+    if call.data =="sssk":
+        button(call.message)
+    if call.data =="br":
+        BIN(call.message)
+    if call.data =="im":
+         IM(call.message)
+
+
+lc = types.InlineKeyboardButton(text = "اضغط هنا", callback_data = 'im')
+def button(message):
+    ms = types.InlineKeyboardMarkup(row_width=1)
+    ms.add(lc)
+    bot.edit_message_text(chat_id=message.chat.id,message_id=message.message_id,text="**هل تريد بدء الفحص؟**",parse_mode='markdown',reply_markup=ms)        
+
+
+def BIN(message):
+        l = 0
+        i = 0
+        mar = '0123456789'  
+        while True:
+            
+            bin = str(''.join((random.choice(mar) for i in range(5))))
+            rq = requests.post ("https://lookup.binlist.net/4"+bin)
+        
+            if '"scheme":"amex"' in rq.text:
+                if '"type":"credit"' in rq.text:
+                    if '"America"' in rq.text:
+                        i+=1
+                        bin_trrue = f"""
+                        bin : 4{bin} True ✅                  
+                        """
+                        bot.send_message(message.chat.id, text=bin_trrue)
+            else:
+                l+=1
+            mees = types.InlineKeyboardMarkup(row_width=1)
+            buut = types.InlineKeyboardButton(f"💵⁞ تم فحص  : {l} بين ",callback_data='jhi')
+            buut5 = types.InlineKeyboardButton(f"⚠️ In : 4{bin}",callback_data='jhi5')
+            buut1 = types.InlineKeyboardButton(f"✅⁞ hits : {i}",callback_data='jhi1')            
+            mees.add(buut,buut1,buut5)
+            bot.edit_message_text(chat_id=message.chat.id,message_id=message.message_id,text="**Cheaker Bins**",parse_mode='markdown',reply_markup=mees)        
+                
+        mees = types.InlineKeyboardMarkup(row_width=1)
+        buut = types.InlineKeyboardButton(f"💵⁞ bin good : {k}",callback_data='jhi')
+        buut5 = types.InlineKeyboardButton(f"⚠️ : 37{bin}",callback_data='jhi5')
+        buut1 = types.InlineKeyboardButton(f"✅⁞ hits : {h}",callback_data='jhi1')            
+        mees.add(buut,buut1,buut5)
+        bot.edit_message_text(chat_id=message.chat.id,message_id=message.message_id,text="**Cheaker Bins**",parse_mode='markdown',reply_markup=mees)
+        
+def IM(message):
+        l = 0
+        i = 0
+        mar = '0123456789'  
+        while True:
+            
+            bin = str(''.join((random.choice(mar) for i in range(5))))
+            rq = requests.post ("https://lookup.binlist.net/4"+bin)
+        
+            if '"scheme":"amex"' in rq.text:
+                if '"type":"credit"' in rq.text:
+                    if '"America"' in rq.text:
+                        i+=1
+                        bin_trrue = f"""
+                        bin : 4{bin} True ✅                  
+                        """
+                        bot.send_message(message.chat.id, text=bin_trrue)
+            else:
+                l+=1
+            mees = types.InlineKeyboardMarkup(row_width=1)
+            buut = types.InlineKeyboardButton(f"💵⁞ تم فحص: {l} بين",callback_data='jhi')
+            buut5 = types.InlineKeyboardButton(f"⚠️ تم فحص هذا البين : 4{bin}",callback_data='jhi5')
+            buut1 = types.InlineKeyboardButton(f"✅⁞ بينات شغالة : {i}",callback_data='jhi1')            
+            mees.add(buut,buut1,buut5)
+            bot.edit_message_text(chat_id=message.chat.id,message_id=message.message_id,text="جاري الصيد B_7_5@",parse_mode='markdown',reply_markup=mees)        
+
+bot.polling()
+
+
+#{"number":{},"scheme":"amex","type":"credit","brand":"american express","country":{"numeric":"076","alpha2":"BR","name":"Brazil","emoji":"🇧🇷","currency":"BRL","latitude":-10,"longitude":-55},"bank":{"name":"AMERICAN EXPRESS","url":"www.americanexpress.com","phone":"4078516060"}}
+
